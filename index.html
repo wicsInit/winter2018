@@ -11,6 +11,7 @@
     <!--Google Font for Header-->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Questrial|Source+Code+Pro" rel="stylesheet">
 
 </head>
 <body>
@@ -19,17 +20,20 @@
     <!--  -->
     <a href="#contact">Contact</a>
     <a href="#shop">Shop</a>
-    <a href="#about">About</a>
     <a href="#team">Team</a>
+    <a href="#about">About</a>
     <a href="#news">News</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <div id="home">
+    <div class="teampic">
+        <img src="assets/team2017-2018.jpg">
+    </div>
     <div id="homecontent">
         <h1>End of the Year Party</h1>
-        <p id="countdown"></p>
-        <h3>Location: SDZ</h3>
+        <h2 id="countdown"></h2>
+        <h1>Location: SDZ</h1>
 
         <script>
             // Set the date we're counting down to
@@ -51,8 +55,8 @@
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 // Output the result in an element with id="demo"
-                document.getElementById("countdown").innerHTML = days + "days : " + hours + "hrs : "
-                    + minutes + "min : " + seconds + "sec ";
+                document.getElementById("countdown").innerHTML =" " + days + "days : " + hours + "hrs : "
+                    + minutes + "min : " + seconds + "sec";
 
                 // If the count down is over, write some text
                 if (distance < 0) {
@@ -62,10 +66,9 @@
             }, 1000);
         </script>
     </div>
-
 </div>
+<hr>
 <div id="news">
-    <!--Main container for the Calendar-->
     <div class="calendarContainer">
         <h3 id="demo"></h3>
         <!--container for Dates-->
@@ -122,8 +125,8 @@
         document.getElementById("event").innerHTML = eList;
 
     </script>
-
 </div>
+
 <div id="about">
     <div class="row">
         <div class="column">
@@ -134,152 +137,138 @@
             <h1>Who are we</h1>
             <p>Women in Computer Science (WiCS) is run by undergraduate students in the Computer Science program at Ryerson University. We want to provide a safe space and support for groups that are traditionally marginalized in the field of computer science.</p>
         </div>
-        <div class="column">
-            <h1>Our goals</h1>
-            <p>Our goal is to encourage current students to continue learning computer science with confidence; foster retention of women and marginalized individuals through mentoring. We want to bring students together allowing them to network and socialize through events and provide opportunities for students to network with women professionals in the industry. Recruiting is also a priority to get prospective students interested in going to the STEM field.</p>
-        </div>
     </div>
-
+    <div class="column">
+        <h1>Our goals</h1>
+        <p>Our goal is to encourage current students to continue learning computer science with confidence; foster retention of women and marginalized individuals through mentoring. We want to bring students together allowing them to network and socialize through events and provide opportunities for students to network with women professionals in the industry. Recruiting is also a priority to get prospective students interested in going to the STEM field.</p>
+    </div>
 </div>
-
+<hr>
 <div id="team">
-   <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/bhoomi.jpg">
-                <img src="assets/bhoomi.jpg" alt="Trolltunga Norway" width="300" height="200">
-            </a>
-            <div class="desc">Bhoomi</div>
+    <div class="t">
+        <img src="assets/deborah.jpg">
+        <div clss="info">
+            <h2>Deborah Mepaiyeda</h2>
+            <p>Co-President</p>
+            <p>dmepaiyeda@ryerson.ca</p>
         </div>
     </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/hema.jpg">
-                <img src="assets/hema.jpg" alt="Trolltunga Norway" width="300" height="200">
-            </a>
-            <div class="desc">Hema</div>
+    <div class="t">
+        <img src="assets/prabhleen.jpg">
+        <div clss="info">
+            <h2>Prableen Kamboj</h2>
+            <p>Co-President</p>
+            <p>pkamboj@ryerson.ca</p>
         </div>
     </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/prabhleen.jpg">
-                <img src="assets/prabhleen.jpg" alt="Trolltunga Norway" width="300" height="200">
-            </a>
-            <div class="desc">Prabhleen</div>
+    <div class="t">
+        <img src="assets/rojin.jpg">
+        <div clss="info">
+            <h2>Rojin Shahba</h2>
+            <p>VP of Communications & Corporate Relations</p>
+            <p>rshahba@ryerson.ca</p>
         </div>
     </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/shay.jpg">
-                <img src="assets/shay.jpg" alt="Trolltunga Norway" width="300" height="200">
-            </a>
-            <div class="desc">Shay</div>
+    <div class="t">
+        <img src="assets/hema.jpg">
+        <div clss="info">
+            <h2>Hema Chudasama</h2>
+            <p>VP Marketing</p>
+            <p>cierullo@ryerson.ca</p>
         </div>
     </div>
-
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/alize.jpg">
-                <img src="assets/alize.jpg" alt="Alize" width="600" height="400">
-            </a>
-            <div class="desc">Alize</div>
+    <div class="t">
+        <img src="assets/lisa.jpg">
+        <div clss="info">
+            <h2>Lisa Wong</h2>
+            <p>VP Academics</p>
+            <p>lisa.c.wong@ryerson.ca</p>
         </div>
     </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/deborah.jpg">
-                <img src="assets/deborah.jpg" alt="Mountains" width="600" height="400">
-            </a>
-            <div class="desc">Deborah</div>
+    <div class="t">
+        <img src="assets/paurali.jpg">
+        <div clss="info">
+            <h2>Paurali Rahevar</h2>
+            <p>VP Outreach</p>
+            <p>paurali.rahevar@ryerson.ca</p>
         </div>
     </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/lisa.jpg">
-                <img src="assets/lisa.jpg" alt="Alize" width="600" height="400">
-            </a>
-            <div class="desc">Lisa</div>
+    <div class="t">
+        <img src="assets/bhoomi.jpg">
+        <div clss="info">
+            <h2>Bhoomi Patel</h2>
+            <p>VP Operations and Events</p>
+            <p>b10patel@ryerson.ca</p>
         </div>
     </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/paurali.jpg">
-                <img src="assets/paurali.jpg" alt="Mountains" width="600" height="400">
-            </a>
-            <div class="desc">Paurali</div>
+    <div class="t">
+        <img src="assets/chloe.jpg">
+        <div clss="info">
+            <h2>Chloe Ierullo</h2>
+            <p>Events and Marketing Associate</p>
         </div>
     </div>
-
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/rojin.jpg">
-                <img src="assets/rojin.jpg" alt="Mountains" width="600" height="400">
-            </a>
-            <div class="desc">Rojin</div>
+    <div class="t">
+        <img src="assets/alize.jpg">
+        <div clss="info">
+            <h2>Alize De Matas</h2>
+            <p>Marketing Associate</p>
         </div>
     </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/chloe.jpg">
-                <img src="assets/chloe.jpg" alt="Northern Lights" width="600" height="400">
-            </a>
-            <div class="desc">Chloe</div>
+    <div class="t">
+    <img src="assets/shay.jpg">
+        <div clss="info">
+            <h2>Santhoshi(Shay) Shankar</h2>
+            <p>Social Media Director</p>
         </div>
     </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/louise.jpg">
-                <img src="assets/louise.jpg" alt="Northern Lights" width="600" height="400">
-            </a>
-            <div class="desc">Louise</div>
+    <div class="t">
+    <img src="assets/zaysham.jpg">
+        <div clss="info">
+            <h2>Zaysham Asad</h2>
+            <p>Events and Marketing Associate</p>
         </div>
     </div>
-
-   <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/zaysham.jpg">
-                <img src="assets/zaysham.jpg" alt="Alize" width="600" height="400">
-            </a>
-            <div class="desc">Zaysham</div>
+    <div class="t">
+        <img src="assets/rod.jpg">
+        <div clss="info">
+            <h2>Rod Eshel</h2>
+            <p>Web Developer</p>
         </div>
     </div>
-    <br>
-    <br>
-    <h3>Web Dev Team</h3>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/retinder.jpg.jpg">
-                <img src="assets/retinder.jpg" alt="Alize" width="300" height="200">
-            </a>
-            <div class="desc">Retinder</div>
+    <div class="t">
+        <img src="assets/retinder.jpg">
+        <div clss="info">
+            <h2>Retinder Labana</h2>
+            <p>Web Developer</p>
         </div>
     </div>
-
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/rod.jpg">
-                <img src="assets/rod.jpg" alt="Northern Lights" width="300" height="200">
-            </a>
-            <div class="desc">Rod</div>
-        </div>
-    </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="assets/jess.jpg">
-                <img src="assets/jess.jpg" alt="Jessica" width="300" height="200">
-            </a>
-            <div class="desc">Jessica</div>
+    <div class="t">
+        <img src="assets/jessica.jpg">
+        <div clss="info">
+            <h2>Jessica Alfante</h2>
+            <p>Web Designer</p>
         </div>
     </div>
 </div>
-
+</div>
+<hr>
 <div id="shop">
-    <h1>Shop</h1>
+    <h1>Coming Soon</h1>
 </div>
-<div id="partner">
-    <h1>Partner</h1>
-</div>
+<hr>
 <div id="contact">
-    <h1>Contact</h1>
+    <h2>Contact</h2>
+    <div class="add">
+        <p>E-mail</p>
+        <p>Facebook</p>
+        <p>LinkenIn</p>
+        <p>Twitter</p>
+    </div>
+
+    <div class="map">
+        map will go here with eng building as our location
+    </div>
 </div>
 </body>
 </html>
