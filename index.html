@@ -2,10 +2,161 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WiCS</title>
-    <link rel="stylesheet" type="text/css" href="style/theme.css"
+    <link rel="stylesheet" type="text/css" href="style/theme.css">
+
+    <!--Calendar styles-->
+    <link rel="stylesheet" type="text/css" href="style/calendar.css">
+    <!--Google Font for Header-->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+
 </head>
 <body>
-    <h1>WiCS</h1>
+<div class="topnav" id="myTopnav">
+    <a style="float:left" class="logo" href="#home">WiCS</a>
+    <!--  -->
+    <a href="#contact">Contact</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#team">Team</a>
+    <a href="#news">News</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div id="home">
+    <div id="homecontent">
+        <h1>End of the Year Party</h1>
+        <p id="countdown"></p>
+        <h3>Location: SDZ</h3>
+
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("April 27, 2018 16:00:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+                // Get todays date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now an the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Output the result in an element with id="demo"
+                document.getElementById("countdown").innerHTML = days + "days : " + hours + "hrs : "
+                    + minutes + "min : " + seconds + "sec ";
+
+                // If the count down is over, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
+    </div>
+
+</div>
+<div id="about">
+    <div class="row">
+        <div class="column">
+            <h1>RYERSON WOMEN IN COMPUTER SCIENCE</h1>
+            <p>WiCS is a student group run by undergraduate Computer Science students at Ryerson University.</p>
+        </div>
+        <div class="column">
+            <h1>Who are we</h1>
+            <p>Women in Computer Science (WiCS) is run by undergraduate students in the Computer Science program at Ryerson University. We want to provide a safe space and support for groups that are traditionally marginalized in the field of computer science.</p>
+        </div>
+        <div class="column">
+            <h1>Our goals</h1>
+            <p>Our goal is to encourage current students to continue learning computer science with confidence; foster retention of women and marginalized individuals through mentoring. We want to bring students together allowing them to network and socialize through events and provide opportunities for students to network with women professionals in the industry. Recruiting is also a priority to get prospective students interested in going to the STEM field.</p>
+        </div>
+    </div>
+
+</div>
+<div id="news">
+    <!--Main container for the Calendar-->
+    <div class="calendarContainer">
+        <h3 id="demo"></h3>
+        <!--container for Dates-->
+        <div class="eventDate">
+            <p id='event'></p>
+        </div>
+    </div>
+
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toDateString();
+        var e = [
+            {
+                date: new Date("Jan 11, 2018 08:00:00"),
+                nama: "One left till school",
+                location: "Ryerson"
+            },
+            {
+                date: new Date("Jan 12, 2018 08:00:00"),
+                nama: "First Day of Winter 2018",
+                location: "Ryerson"
+            },
+            {
+                date: new Date("Jan 19, 2018 18:00:00"),
+                nama: "Winter 2018 Meet n Greet",
+                location: "SLC"
+            },
+            {
+                date: new Date("Jan 24, 2018 18:00:00"),
+                nama: "Women in STEM",
+                location: "TBA"
+            },
+            {
+                date: new Date("Jan 25, 2018 18:00:00"),
+                nama: "Industry Night",
+                location: "TBA"
+            }
+        ]
+        var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+        var eList = "";
+
+        for(var i=0; i<e.length; i++)
+        {
+            console.log(e[i].date.getDate());
+            if (e[i].date > d){
+                eList += "<div class='container' style=' width:80%; padding-bottom: 5px; marign-right:5px; margin-left:5px;'><div class='left' style='margin:0px; width:100px; text-align:center; float:left'><h2 style='margin:0;'>"+
+                    e[i].date.getDate()
+                    + "</h2><p style='margin:0;'>"
+                    + days[e[i].date.getDay()] +
+                    "</p></div><div class='right' style=' padding-bottom: 5px; margin:0;  padding-left:4px; text-align:left; flex:right;'><h4 style='margin:0;'>"
+                    + e[i].nama +"</h4><p style='margin:0'>"+ e[i].location+"</p></div></div>"
+                if(i<e.length-1){
+                    eList += "<hr>";
+                }
+            }
+            console.log(eList);
+        }
+        document.getElementById("event").innerHTML = eList;
+
+    </script>
+
+</div>
+<div id="team">
+    <h1>Team</h1>
+</div>
+<div id="shop">
+    <h1>Team</h1>
+</div>
+<div id="partner">
+    <h1>Team</h1>
+</div>
+<div id="contact">
+    <h1>Team</h1>
+</div>
 </body>
 </html>
