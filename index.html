@@ -13,6 +13,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Questrial|Source+Code+Pro" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
 <div class="topnav" id="myTopnav">
@@ -147,7 +149,7 @@
 <div id="team">
     <div class="t">
         <img src="assets/deborah.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Deborah Mepaiyeda</h2>
             <p>Co-President</p>
             <p>dmepaiyeda@ryerson.ca</p>
@@ -155,7 +157,7 @@
     </div>
     <div class="t">
         <img src="assets/prabhleen.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Prableen Kamboj</h2>
             <p>Co-President</p>
             <p>pkamboj@ryerson.ca</p>
@@ -163,7 +165,7 @@
     </div>
     <div class="t">
         <img src="assets/rojin.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Rojin Shahba</h2>
             <p>VP of Communications & Corporate Relations</p>
             <p>rshahba@ryerson.ca</p>
@@ -171,7 +173,7 @@
     </div>
     <div class="t">
         <img src="assets/hema.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Hema Chudasama</h2>
             <p>VP Marketing</p>
             <p>cierullo@ryerson.ca</p>
@@ -179,7 +181,7 @@
     </div>
     <div class="t">
         <img src="assets/lisa.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Lisa Wong</h2>
             <p>VP Academics</p>
             <p>lisa.c.wong@ryerson.ca</p>
@@ -187,7 +189,7 @@
     </div>
     <div class="t">
         <img src="assets/paurali.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Paurali Rahevar</h2>
             <p>VP Outreach</p>
             <p>paurali.rahevar@ryerson.ca</p>
@@ -195,7 +197,7 @@
     </div>
     <div class="t">
         <img src="assets/bhoomi.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Bhoomi Patel</h2>
             <p>VP Operations and Events</p>
             <p>b10patel@ryerson.ca</p>
@@ -203,49 +205,49 @@
     </div>
     <div class="t">
         <img src="assets/chloe.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Chloe Ierullo</h2>
             <p>Events and Marketing Associate</p>
         </div>
     </div>
     <div class="t">
         <img src="assets/alize.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Alize De Matas</h2>
             <p>Marketing Associate</p>
         </div>
     </div>
     <div class="t">
-    <img src="assets/shay.jpg">
-        <div clss="info">
+        <img src="assets/shay.jpg">
+        <div class="info">
             <h2>Santhoshi(Shay) Shankar</h2>
             <p>Social Media Director</p>
         </div>
     </div>
     <div class="t">
-    <img src="assets/zaysham.jpg">
-        <div clss="info">
+        <img src="assets/zaysham.jpg">
+        <div class="info">
             <h2>Zaysham Asad</h2>
             <p>Events and Marketing Associate</p>
         </div>
     </div>
     <div class="t">
         <img src="assets/rod.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Rod Eshel</h2>
             <p>Web Developer</p>
         </div>
     </div>
     <div class="t">
         <img src="assets/retinder.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Retinder Labana</h2>
             <p>Web Developer</p>
         </div>
     </div>
     <div class="t">
         <img src="assets/jessica.jpg">
-        <div clss="info">
+        <div class="info">
             <h2>Jessica Alfante</h2>
             <p>Web Designer</p>
         </div>
@@ -282,6 +284,20 @@
                     map: map
                 });
             }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('a[href^="#"]').on('click', function(e){
+                    e.preventDefault();
+
+                    var target = this.hash;
+                    var $target = $(target);
+
+                    $('html, body').animate({
+                        'scrollTop': $target.offset().top
+                    }, 1000, 'swing');
+                });
+            });
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3hlb5lk3m7u1e4uJ-RPPQNqfA4x7AALw&callback=initMap"
                 type="text/javascript"></script>
